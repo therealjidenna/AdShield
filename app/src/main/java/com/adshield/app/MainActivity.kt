@@ -44,6 +44,9 @@ class MainActivity : Activity() {
         toggle.setOnClickListener {
             if (AdVpnService.running) stopBlocking() else startBlocking()
         }
+        findViewById<Button>(R.id.openBrowserButton).setOnClickListener {
+            startActivity(Intent(this, BrowserActivity::class.java))
+        }
         findViewById<Button>(R.id.addButton).setOnClickListener { addDomain() }
 
         Blocklist.load(this)

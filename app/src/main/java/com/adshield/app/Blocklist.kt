@@ -81,6 +81,10 @@ object Blocklist {
 object AdStats {
     val total = AtomicInteger(0)
     val blocked = AtomicInteger(0)
+
+    /** Requests blocked inside the built-in browser (separate from the VPN's DNS blocking). */
+    val pageBlocked = AtomicInteger(0)
+
     private val recent = ConcurrentLinkedDeque<String>()
 
     fun addBlocked(name: String) {

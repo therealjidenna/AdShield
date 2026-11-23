@@ -32,6 +32,12 @@
             android:layout_marginTop="12dp"
             android:text="Turn on" />
 
+        <Button
+            android:id="@+id/openBrowserButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open AdShield browser" />
+
         <TextView
             android:id="@+id/stats"
             android:layout_width="wrap_content"
